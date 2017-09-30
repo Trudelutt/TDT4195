@@ -56,9 +56,9 @@ void runProgram(GLFWwindow* window)
 		0, 1, 2
 	};
 	//Task 1
-	//setupVAO(vertices, 12*3, indices, 15);
+	setupVAO(vertices, 12*3, indices, 15);
 	// task 2
-	setupVAO(verticesOneTriangle, 9, indicesOneTriangle, 3);
+	//setupVAO(verticesOneTriangle, 9, indicesOneTriangle, 3);
 	
 	// Rendering Loop
 	while (!glfwWindowShouldClose(window))
@@ -67,8 +67,8 @@ void runProgram(GLFWwindow* window)
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		// Draw your scene here
-		//drawScene(15, indices);
-		drawScene(3, indicesOneTriangle);
+		drawScene(15, indices);
+		//drawScene(3, indicesOneTriangle);
 		// Handle other events
 		glfwPollEvents();
 		handleKeyboardInput(window);
